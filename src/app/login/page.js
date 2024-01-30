@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { signIn } from "next-auth/react"
 import { useState } from "react";
+import Link from "next/link";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -51,18 +52,18 @@ export default function LoginPage() {
           className="my-4 text-center text-gray-500
                 "
         >
-          or login with google
+          or login with Admin Credentials
         </div>
         <button className="flex gap-4 justify-center" onClick={rewriteCredentail}>
           <Image src={"/admin.png"} alt="" width={24} height={24} />
           Set admin Credentials
         </button>
-        {/* <div className="text-center my-4 text-gray-500 border-t pt-4">
-          Existing account?
-          <Link className="underline" href={"/login"}>
-            Login here &raquo;
+        <div className="text-center my-4 text-gray-500 border-t pt-4">
+          No existing account?
+          <Link className="underline" href={"/register"}>
+            Register here &raquo;
           </Link>
-        </div> */}
+        </div>
       </form>
     </section>
   );
