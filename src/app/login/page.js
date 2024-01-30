@@ -8,6 +8,11 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [logininProgress, setLogininProgress] = useState(false);
 
+  function rewriteCredentail(){
+    setEmail('Admin@exgmail.com');
+    setPassword('adminpas12345');
+  }
+
   async function handleSubmit(ev){
     ev.preventDefault();
     setLogininProgress(true);
@@ -48,9 +53,9 @@ export default function LoginPage() {
         >
           or login with google
         </div>
-        <button className="flex gap-4 justify-center">
-          <Image src={"/google.png"} alt="" width={24} height={24} />
-          Login with google
+        <button className="flex gap-4 justify-center" onClick={rewriteCredentail}>
+          <Image src={"/admin.png"} alt="" width={24} height={24} />
+          Set admin Credentials
         </button>
         {/* <div className="text-center my-4 text-gray-500 border-t pt-4">
           Existing account?

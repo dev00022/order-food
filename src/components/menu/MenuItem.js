@@ -52,7 +52,7 @@ export default function MenuItem(menuItem) {
         <div className="fixed inset-0 w-md bg-black/80 flex items-center justify-center">
           <div
             onClick={(ev) => ev.stopPropagation()}
-            className="bg-white p-6 rounded-lg min-w-[30vw] max-w-lg my-8"
+            className="bg-white max-sm:w-[90vw] p-6 rounded-lg min-w-[30vw] max-w-lg my-8"
           >
             <button
               type="button"
