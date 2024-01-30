@@ -96,7 +96,7 @@ export default function Header() {
             )}
           </nav>
           <div className="flex gap-2 items-center justify-center">
-            <Link className="md:hidden" href={"/profile"}>
+            <Link className="md:hidden" href={profileName ?"/profile" : "login"}>
               <CldImage
                 className="rounded-full border-gray-700 shadow-sm shadow-black"
                 src={profileImage || "vyifgnq3idhbulpyt0ne"}

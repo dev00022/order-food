@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function SideBar() {
-  const [image, setImage] = useState('');
+  const [image, setImage] = useState("");
   const [name, setName] = useState("");
   useEffect(() => {
     fetch("/api/profile").then((res) => {
@@ -20,11 +20,11 @@ export default function SideBar() {
         <Link
           className=" flex items-center gap-4"
           type="button"
-          href={"/profile"}
+          href={name ? "/profile" : "/login"}
         >
           <CldImage
             className="rounded-full"
-            src={image? image : 'vyifgnq3idhbulpyt0ne'}
+            src={image ? image : "vyifgnq3idhbulpyt0ne"}
             width={70}
             height={70}
             alt="profile"
@@ -43,6 +43,11 @@ export default function SideBar() {
           </Link>
           <Link className="link" href={"/#contact"}>
             Contact
+          </Link>
+          <Link className="text-red-500" href={"/login"}>
+            <button className="border-none text-red-600" type="button">
+              Logout
+            </button>
           </Link>
         </div>
       </div>

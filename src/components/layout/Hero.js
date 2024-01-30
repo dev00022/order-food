@@ -15,7 +15,7 @@ export default function Hero() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
           facilis ut
         </p>
-        <div className=" w-[45vw] flex gap-2 text-sm ">
+        <div className=" lg:w-[30vw] md:w-[45vw] flex gap-2 text-sm ">
           <Link href={'/menu'} className=" w-[40%] bg-red-600 text-white font-semibold uppercase justify-center items-center flex py-2 rounded-full gap-2">
             Order now
             <Right />
@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
       </div>
       <div className=" flex justify-center items-center">
-        <Image src={"/cake.png"} width={300} height={150} alt="pizza" />
+        <Image src={"/cake.png"} width={400} height={300} alt="pizza" />
       </div>
     </section>
   );
